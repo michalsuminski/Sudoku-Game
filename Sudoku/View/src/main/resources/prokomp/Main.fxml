@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="524.0" prefWidth="800.0" spacing="30.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="prokomp.LevelController">
+   <children>
+      <MenuBar prefHeight="30.0" prefWidth="800.0">
+        <menus>
+            <Menu mnemonicParsing="false" text="%file">
+               <graphic>
+                  <TextField fx:id="namofsudokufrombase" onAction="#onActionTextFieldDatabase" />
+               </graphic></Menu>
+            <Menu mnemonicParsing="false" text="%edition">
+                <items>
+                    <Menu fx:id="lang_chooser" mnemonicParsing="false" text="%lang_choose">
+                        <items>
+                            <MenuItem fx:id="lang_pl" mnemonicParsing="false" onAction="#onActionButtonLang_PL" text="%lang_pl" />
+                            <MenuItem fx:id="lang_en" mnemonicParsing="false" onAction="#onActionButtonLang_EN" text="%lang_en" />
+                        </items>
+                    </Menu>
+                </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="%help">
+                <items>
+                    <MenuItem mnemonicParsing="false" text="%about" />
+                </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+      <Label alignment="TOP_CENTER" contentDisplay="CENTER" text="%set_level" textAlignment="CENTER">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+      <Label text="%level_easy">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <ButtonBar maxWidth="356.0" minWidth="65.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="30.0" prefWidth="356.0">
+        <buttons>
+          <Button fx:id="ButtonEasyGenerate" alignment="CENTER" minWidth="82.0" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" onAction="#onActionButtonEasyGenerate" prefHeight="26.0" prefWidth="417.0" text="%generate" textAlignment="CENTER">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Button>
+            <Button fx:id="ButtonEasyFromFile" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onActionButtonEasyFromFile" text="%from_file" />
+            <Button fx:id="ButtonEasyFromDatabase" mnemonicParsing="false" onAction="#onActionButtonEasyFromDatabase" text="%dbase" />
+        </buttons>
+      </ButtonBar>
+      <Label layoutX="376.0" layoutY="130.0" text="%level_medium">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <ButtonBar layoutX="309.0" layoutY="186.0" maxWidth="356.0" minWidth="65.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="30.0" prefWidth="356.0">
+         <buttons>
+            <Button fx:id="ButtonMediumGenerate" alignment="CENTER" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" onAction="#onActionButtonMediumGenerate" prefHeight="26.0" prefWidth="277.0" text="%generate" textAlignment="CENTER">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Button>
+            <Button fx:id="ButtonMediumFromFile" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onActionButtonMediumFromFile" text="%from_file" />
+            <Button fx:id="ButtonMediumFromDatabase" mnemonicParsing="false" onAction="#onActionButtonMediumFromDatabase" prefHeight="26.0" text="%dbase" />
+         </buttons>
+      </ButtonBar>
+      <Label layoutX="373.0" layoutY="246.0" text="%level_hard">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <ButtonBar layoutX="309.0" layoutY="302.0" maxWidth="356.0" minWidth="65.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="30.0" prefWidth="356.0">
+         <buttons>
+            <Button fx:id="ButtonHardGenerate" alignment="CENTER" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" onAction="#onActionButtonHardGenerate" prefHeight="17.0" prefWidth="247.0" text="%generate" textAlignment="CENTER">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Button>
+            <Button fx:id="ButtonHardFromFile" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onActionButtonHardFromFile" text="%from_file" />
+            <Button fx:id="ButtonHardFromDatabase" mnemonicParsing="false" onAction="#onActionButtonHardFromDatabase" text="%dbase" />
+         </buttons>
+      </ButtonBar>
+      <Button fx:id="authors_Id" mnemonicParsing="false" onAction="#onActionButtonAuthors" text="%authors" />
+   </children>
+</VBox>
